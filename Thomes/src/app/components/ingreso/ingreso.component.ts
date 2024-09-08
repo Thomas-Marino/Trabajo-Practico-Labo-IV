@@ -30,17 +30,11 @@ export class IngresoComponent
       this.usuario = ""; 
       this.password = "";
       this.routerService.GoToHome();
-      // Swal.fire({title: "Sesión iniciada correctamente!", icon: "success", confirmButtonColor: "#008547", confirmButtonText: "Ir al inicio!",}).then((result) => {
-      //   this.usuario = ""; 
-      //   this.password = "";
-      //   this.routerService.GoToHome();
-      // });
     }
     else 
     { 
       this.sesionIniciada = false; 
       await this.swalService.LanzarAlert("Error al iniciar sesión!", "error", ingresoUsuario.mensajeError, false, "Aceptar");
-      // Swal.fire({title: "Error al iniciar sesión!", text: ingresoUsuario.mensajeError, icon: "error", confirmButtonColor: "#2946c6",confirmButtonText: "Aceptar",});
     } 
   }
 }  
