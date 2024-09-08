@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import { FirebaseError } from '@angular/fire/app';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { getAuth, User } from '@angular/fire/auth';
+// import { getAuth, User } from '@angular/fire/auth';
 import { RouterService } from './router.service';
+import { firstValueFrom, Observable } from 'rxjs';
+import { user } from '@angular/fire/auth';
 
 export interface authResponse
 {
@@ -50,9 +52,20 @@ export class AuthService {
 		}
 	}
 
-	ObtenerSesion() : User | null
+	ObtenerSesion()
 	{
-		return getAuth().currentUser;
+		return this.auth.authState;
+	}
+
+	async ObtenerUsuario()
+	{
+		const observableSesion = this.ObtenerSesion();
+		let usuario : string = "";
+	
+		const sesion = await firstValueFrom(observableSesion);
+		if(sesion?.email) { usuario = sesion.email.split("@")[0]; }
+		
+		return usuario;
 	}
 
 	async IniciarSesion(correo:string, password:string) : Promise<authResponse>
