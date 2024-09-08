@@ -26,7 +26,7 @@ export class IngresoComponent
     const ingresoUsuario : authResponse = await this.firebaseAuthService.IniciarSesion(usuarioIngresado, passIngresada);
     if(!ingresoUsuario.huboError && ingresoUsuario.mensajeExito) 
     { 
-      await this.swalService.LanzarAlert("Sesión iniciada correctamente!", "success", "", false, "Ir al inicio!");
+      await this.swalService.LanzarAlert("Sesión iniciada correctamente!", "success", ingresoUsuario.mensajeExito, false, "Ir al inicio!");
       this.usuario = ""; 
       this.password = "";
       this.routerService.GoToHome();
