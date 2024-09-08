@@ -1,0 +1,29 @@
+<div id="contenedor_main_ingreso">
+    <!-- <p>Sistema de gestión de pacientes.</p> -->    
+    <div class="row">
+        <div class="col"> 
+            <div class="form_ingreso">
+                <h3 id="titulo_form">Bienvenido a Thomes!</h3>
+
+                <div id="overlay">
+                    <div id="loading-bar-spinner" class="spinner"><div class="spinner-icon"></div></div>
+                </div>
+                <div class="contenedor_input_form">
+                    <i class="uil uil-user user"></i>
+                    <input type="text" id="usuario" [(ngModel)]="usuario" placeholder="Ingresa tu usuario">
+                </div>
+                
+                <div class="contenedor_input_form">
+                    <i class="uil uil-lock password"></i>
+                    <input type="password" id="contrasenia" [(ngModel)]="password" placeholder="Ingresa tu contraseña">
+                </div>
+
+                <div id="contenedor_error_msg"> </div>
+                
+                <div class="contenedor_input_form">
+                    <button type="button" id="btn_iniciar_sesion" (click)="IniciarSesion(this.usuario, this.password)">Iniciar sesion</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
