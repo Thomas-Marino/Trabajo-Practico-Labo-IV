@@ -9,6 +9,9 @@ import { IngresoComponent } from './components/ingreso/ingreso.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { HeaderComponent } from './components/header/header.component';
 import { QuienSoyComponent } from './components/quien-soy/quien-soy.component';
+import { FormsModule } from '@angular/forms';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,7 @@ import { QuienSoyComponent } from './components/quien-soy/quien-soy.component';
     HeaderComponent,
     QuienSoyComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, AngularFireModule.initializeApp(environment.firebaseConfig)],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, AngularFireModule.initializeApp(environment.firebaseConfig), AngularFireAuthModule, NgbModule],
   providers: [],
   bootstrap: [AppComponent]
 })
