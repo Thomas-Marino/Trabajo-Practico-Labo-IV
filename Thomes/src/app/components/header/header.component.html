@@ -9,8 +9,7 @@
                     <div class="col">
                         <li class="nav-item"> 
                             <div ngbDropdown class="d-inline-block">
-                                <!-- <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="font-size: 20px; font-weight: 500;"><img src="../../../../assets/img-usuario.png" alt="mdo" width="32" height="32" class="rounded-circle"> {{this.gestorCredencialesSrv.nombreUsuarioLogueado}} </button> -->
-                                <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="font-size: 20px; font-weight: 500;"><img src="../../../../assets/img-usuario.png" alt="mdo" width="32" height="32" class="rounded-circle"> usuarioLogueado </button>
+                                <button class="btn" id="dropdownBasic1" ngbDropdownToggle><img src="imgs/user.png" alt="mdo" width="32" height="32" class="rounded-circle"> {{ nombreUsuario }} </button>
                                 <div ngbDropdownMenu aria-labelledby="dropdownBasic">
                                     <button ngbDropdownItem (click)="CerrarSesion()">Cerrar Sesión</button>
                                 </div>
