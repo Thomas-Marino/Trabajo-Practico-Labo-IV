@@ -16,3 +16,4 @@ Trabajo práctico obligatorio para la aprobación de la materia Laboratorio de c
 - Favicon implementado.
 - Adicionalmente, agregue un header para navegar entre las distintas rutas
 - Identificación y cierre de sesión implementado en el header 
+- Script npm run build-host para levantar el servidor rápidamente
