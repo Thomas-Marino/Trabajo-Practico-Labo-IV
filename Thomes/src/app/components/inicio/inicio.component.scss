@@ -4,9 +4,20 @@
     min-width: 100%;
     min-height: 100vh;
     background: radial-gradient(50% 50% at 50% 50%, #d6d6d6 51.04%, #ededed 100%);
+    padding: 1rem;
 }
 
-mat-card{ margin-top: 15px; }
+mat-card
+{ 
+    margin-top: 15px; 
+    transition: transform 0.2s;
+}
+
+mat-card:hover
+{
+    transform: scale(1.02);
+}
+
 mat-card-subtitle{ margin-top: 10px; font-weight: 400;}
 mat-card-title{ font-weight: 600; }
 img{ border-radius: 1rem; }
