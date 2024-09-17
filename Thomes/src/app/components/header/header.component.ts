@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterService } from '../../services/router.service';
-import { AuthService } from '../../services/firebase-auth.service';
+import { AuthService } from '../../services/firebase/firebase-auth.service';
 import { SwalService } from '../../services/swal.service';
+import { UserService } from '../../services/data/user.service';
 
 @Component({
   selector: 'app-header',
@@ -11,19 +12,17 @@ import { SwalService } from '../../services/swal.service';
 })
 export class HeaderComponent implements OnInit
 {
-	constructor(public router:RouterService, public authService:AuthService, public swalService:SwalService) {}
+	constructor(public router:RouterService, public authService:AuthService, public swalService:SwalService, public userService:UserService) { }
 
   nombreUsuario: string = "";
 
   ngOnInit(): void 
   {
-    this.ObtenerUsuario();
-    console.log(this.authService.ObtenerUsuario())
-  }
+    const usuarioLogueado = localStorage.getItem("usuarioLogueado");
 
-  async ObtenerUsuario() // Creo una función obtener usuario nuevamente para que oninit no sea async.
-  {
-    this.nombreUsuario = await this.authService.ObtenerUsuario();
+    this.userService.nombreUsuario$.subscribe(nombre => { this.nombreUsuario = nombre; });
+    // añado validación contra localStorage por si se refresca la pagina, no perder los datos del usuario logueado.
+    if(usuarioLogueado !== null) { this.nombreUsuario = usuarioLogueado; }
   }
 
   async CerrarSesion():Promise<void>
@@ -33,12 +32,8 @@ export class HeaderComponent implements OnInit
     {
       this.authService.CerrarSesion();
       this.router.GoToLogin()
+      this.userService.AsignarNombreUsuario(''); // Restablecer nombre de usuario
+      localStorage.removeItem("usuarioLogueado");
     }
   }
-
-	EstoyEnIngreso()
-	{
-		if(this.router.GetUrl() == "/ingreso") { return true; }
-		return false;
-	}
 }

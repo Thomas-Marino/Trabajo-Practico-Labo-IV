@@ -1,22 +1,19 @@
-<div class="row" *ngIf="!this.EstoyEnIngreso()">
-    <!-- <div class="row"> -->
-        <div class="container-fluid" id="container-fluid-header">
-            <header>
-                <ul class="nav nav-pills" >
-                    <li class="nav-item"><a href="home" class="nav-link" id="btn-inicio">Inicio</a></li>
-                    <!-- <li class="nav-item"><a href="playroom" class="nav-link" id="btn-ayuda">A jugar</a></li> -->
-                    <li class="nav-item"><a href="quien-soy" class="nav-link" id="btn-ayuda">Quien soy?</a></li>
-                    <div class="col">
-                        <li class="nav-item"> 
-                            <div ngbDropdown class="d-inline-block">
-                                <button class="btn" id="dropdownBasic1" ngbDropdownToggle><img src="imgs/user.png" alt="mdo" width="32" height="32" class="rounded-circle"> {{ nombreUsuario }} </button>
-                                <div ngbDropdownMenu aria-labelledby="dropdownBasic">
-                                    <button ngbDropdownItem (click)="CerrarSesion()">Cerrar Sesión</button>
-                                </div>
-                            </div>
-                        </li>
-                    </div>
-                </ul>
-            </header>
+
+<mat-toolbar id="header-app">
+    <span>
+        <img src="imgs/game.png"> 
+        Thomes
+    </span>
+    
+    <a mat-button color="primary" (click)="this.router.GoToHome()">Inicio</a>        
+    <a mat-button *ngIf="this.nombreUsuario == ''" color="primary" (click)="this.router.GoToLogin()">Ingreso</a>        
+    <a mat-button color="primary" (click)="this.router.GoToQuienSoy()">Quién soy</a>        
+    
+    <div ngbDropdown *ngIf="this.nombreUsuario" class="d-inline-block">
+        <button class="btn" id="dropdownBasic1" ngbDropdownToggle><img src="imgs/user.png" alt="mdo" width="32" height="32" class="rounded-circle"> {{ nombreUsuario }} </button>
+        
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic">
+            <button ngbDropdownItem (click)="CerrarSesion()">Cerrar Sesión</button>
         </div>
     </div>
+</mat-toolbar>
