@@ -1,6 +1,16 @@
-.container
+.contenedor-juegos
 {
+    margin-top: 10px;
     min-width: 100%;
     min-height: 100vh;
-    background: radial-gradient(circle, rgba(107,182,76,1) 0%, rgba(9,121,24,1) 60%, rgba(4,45,13,1) 100%);
+    background: radial-gradient(50% 50% at 50% 50%, #d6d6d6 51.04%, #ededed 100%);
 }
+
+mat-card{ margin-top: 15px; }
+mat-card-subtitle{ margin-top: 10px; font-weight: 400;}
+mat-card-title{ font-weight: 600; }
+img{ border-radius: 1rem; }
+
+
+// Oculta la imagen en pantallas pequeñas
+@media (max-width: 1000px) { img { display: none; } }
