@@ -1,29 +1,34 @@
-<div id="contenedor_main_ingreso">
-    <!-- <p>Sistema de gestión de pacientes.</p> -->    
-    <div class="row">
-        <div class="col"> 
-            <div class="form_ingreso">
-                <h3 id="titulo_form">Bienvenido a Thomes!</h3>
-
-                <div id="overlay">
-                    <div id="loading-bar-spinner" class="spinner"><div class="spinner-icon"></div></div>
-                </div>
-                <div class="contenedor_input_form">
-                    <i class="uil uil-user user"></i>
-                    <input type="text" id="usuario" [(ngModel)]="usuario" placeholder="Ingresa tu usuario">
-                </div>
+<div id="contenedor-ingreso">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Bienvenido a Thomes!</mat-card-title>
+        </mat-card-header>
+      
+        <mat-card-content>
+            <form class="form-ingreso">
+                <mat-form-field id="campo-correo" appearance="outline" class="full-width">
+                    <mat-label>Email</mat-label>
+                    <input type="email" matInput [(ngModel)]="this.usuario" name="usuario" placeholder="Ingrese el correo con el que se registro...">
+                </mat-form-field>
                 
-                <div class="contenedor_input_form">
-                    <i class="uil uil-lock password"></i>
-                    <input type="password" id="contrasenia" [(ngModel)]="password" placeholder="Ingresa tu contraseña">
-                </div>
+                <br>
 
-                <div id="contenedor_error_msg"> </div>
+                <mat-form-field id="campo-password" appearance="outline" class="full-width">
+                    <mat-label>Contraseña</mat-label>
+                    <input type="password" matInput [(ngModel)]="this.password" name="password" placeholder="Ingrese su contraseña...">
+                </mat-form-field>
+
+                <button mat-button id="btn_iniciar_sesion" class="md-width" (click)="IniciarSesion(this.usuario, this.password)">Iniciar sesion</button>
+
+                <br>
                 
-                <div class="contenedor_input_form">
-                    <button type="button" id="btn_iniciar_sesion" (click)="IniciarSesion(this.usuario, this.password)">Iniciar sesion</button>
-                </div>
-            </div>
-        </div>
-    </div>
+                <button mat-button class="btn_acceso_rapido" (click)="InicioSesionRapido('prueba')"> <img src="imgs/autoCompletar.png" height="42px" width="42">autoCompletar</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+    <br>
+    <mat-label>
+        ¿No tiene cuenta? 
+        <a mat-button routerLink="/registro">Registrese aquí.</a> 
+    </mat-label>
 </div>

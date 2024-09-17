@@ -1,139 +1,47 @@
-#contenedor_main_ingreso
+#contenedor-ingreso
 {
-    /* background: red; */
-    background: radial-gradient(circle, rgba(76,115,182,1) 0%, rgba(9,34,121,1) 60%, rgba(43,43,43,1) 100%);
-    height: 100%;
-    min-height: 100vh;
-    text-align: center;
-    overflow: hidden;
+    margin-top: 10px;
+    height: 100vh;
+    background: radial-gradient(50% 50% at 50% 50%, #e0e7fe 51.04%, #ededed 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; // Alinea los elementos en forma de columna 
 }
+  
+.full-width { width: 100%; }
 
-.form_ingreso
+.md-width { width: 50%; }
+  
+mat-card 
 {
-    margin-top: 14rem;
-    max-width: 525px;
-    margin-left: 38%;
-    padding: 1rem;
-    background-color: rgb(255, 255, 255);
-    border-radius: 2px;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 80%;
+    min-width: 50%;
     box-shadow: 0px 0px 34px -4px rgba(0,0,0,0.29);
     -webkit-box-shadow: 0px 0px 34px -4px rgba(0,0,0,0.29);
     -moz-box-shadow: 0px 0px 34px -4px rgba(0,0,0,0.29);
-    margin-inline: auto;
 }
 
-#titulo_form
+mat-card-header
+{
+    align-self: center;
+    margin-bottom: 2rem;
+}
+  
+form
 {
     display: flex;
-    justify-content: center;    
-    font-size: 28px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-weight: 400;
-}
-
-.contenedor_input_form
-{
-    padding: 18px;
-}
-
-.contenedor_input_form i
-{
-    left: 0;
-    margin-right: 0.8rem;
-    font-size: 30px;
-    color: #79a979;
-}
-
-input
-{
-    outline: 0;
-    background-color: #fff !important;
-    background-image: none !important;
-    border: 0px;
-    border-bottom: 1px solid #9C9A99;
-    color: #555;
-    display: inline-block;
-    font-size: 1em;
-    height: 60px !important;
-    line-height: 1.42857143;
-    padding: 6px 20px !important;
-    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s !important;
-    width: 90% !important;
-    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s !important;
-    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s !important;
+    flex-direction: column;
+    align-items: center;
 }
 
 #btn_iniciar_sesion
 {
-    background-image: none;
     background-color: #2946c6;
-    border: none;
-    border-radius: .5rem;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 1em;
-    font-weight: 600;
-    height: inherit;
-    line-height: 1.3333333;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    margin-right: 0;
-    margin-left: 0;
-    padding: 10px 16px;
-    text-align: center;
-    touch-action: manipulation;
-    user-select: none;
-    vertical-align: middle;
-    white-space: nowrap;
-    width: inherit;
-    -moz-user-select: none;
-    -ms-touch-action: manipulation;
-    -ms-user-select: none;
-    -webkit-user-select: none;
-    color: #fff;
-    width: 63%;
-    box-shadow: 0 0 30px 0 #dae1f7;
-    letter-spacing: 0.6px;
+    color: white;
+    margin-top: 10px;
+    font-size: 1rem;
+    border-radius: 0.5rem;
 }
-
-#contenedor_error_msg
-{
-    font-size: 16px;
-}
-
-// #loading-bar-spinner.spinner {
-//     left: 50%;
-//     margin-left: -20px;
-//     top: 50%;
-//     margin-top: -20px;
-//     position: absolute;
-//     z-index: 19 !important;
-//     animation: loading-bar-spinner 400ms linear infinite;
-// }
-
-// #loading-bar-spinner.spinner .spinner-icon {
-//     width: 40px;
-//     height: 40px;
-//     border:  solid 4px transparent;
-//     border-top-color:  #00C8B1 !important;
-//     border-left-color: #00C8B1 !important;
-//     border-radius: 50%;
-// }
-
-// #overlay
-// {
-//     display: none; 
-//     position: fixed; 
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%; 
-//     background-color: rgba(255, 255, 255, 0.364); 
-//     z-index: 9999;
-// }
-
-// @keyframes loading-bar-spinner {
-//   0%   { transform: rotate(0deg);   transform: rotate(0deg); }
-//   100% { transform: rotate(360deg); transform: rotate(360deg); }
-// }
