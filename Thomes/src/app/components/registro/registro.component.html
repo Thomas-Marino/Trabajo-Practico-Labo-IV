@@ -1,0 +1,28 @@
+<div id="contenedor-registro">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Registrate para acceder a Thomes.</mat-card-title>
+            <mat-card-subtitle>Es rápido y sencillo!</mat-card-subtitle>
+        </mat-card-header>
+      
+        <mat-card-content>
+            <form class="form-ingreso">
+                <mat-form-field id="campo-correo" appearance="outline" class="full-width">
+                    <mat-label>Email</mat-label>
+                    <input type="email" matInput [(ngModel)]="this.correo" maxlength="80" name="correo" placeholder="ejemplo@ejemplo.com"/>
+                    <mat-hint align="start">Ingrese el correo con el cual se registrará (Máximo 80 carácteres)</mat-hint>
+                </mat-form-field>
+                
+                <br>
+
+                <mat-form-field id="campo-password" appearance="outline" class="full-width">
+                    <mat-label>Contraseña</mat-label>
+                    <input type="password" matInput [(ngModel)]="this.password" maxlength="80" name="password" placeholder="Ingrese su contraseña..."/>
+                    <mat-hint align="start">Asegurese de que la contraseña sea segura (Máximo 80 carácteres)</mat-hint>
+                </mat-form-field>
+
+                <button mat-button id="btn_registrarse" class="md-width" (click)="RegistrarUsuario(this.correo, this.password)">Registrarse</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

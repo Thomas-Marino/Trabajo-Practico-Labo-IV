@@ -1,0 +1,47 @@
+#contenedor-registro
+{
+    margin-top: 10px;
+    height: 100vh;
+    background: radial-gradient(50% 50% at 50% 50%, #e0fef6 51.04%, #ededed 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; // Alinea los elementos en forma de columna 
+}
+  
+.full-width { width: 100%; }
+
+.md-width { width: 50%; }
+  
+mat-card 
+{
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 80%;
+    min-width: 50%;
+    box-shadow: 0px 0px 34px -4px rgba(0,0,0,0.29);
+    -webkit-box-shadow: 0px 0px 34px -4px rgba(0,0,0,0.29);
+    -moz-box-shadow: 0px 0px 34px -4px rgba(0,0,0,0.29);
+}
+
+mat-card-header
+{
+    align-self: center;
+    margin-bottom: 2rem;
+}
+  
+form
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#btn_registrarse
+{
+    background-color: #29c68a;
+    color: white;
+    margin-top: 10px;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+}
