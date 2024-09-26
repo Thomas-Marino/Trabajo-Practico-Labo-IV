@@ -10,7 +10,9 @@ const routes: Routes = [
   {path: 'ingreso', component: IngresoComponent},
   {path: 'home', component: InicioComponent},
   {path: 'registro', component: RegistroComponent},
-  {path: 'quien-soy', component: QuienSoyComponent}];
+  {path: 'quien-soy', component: QuienSoyComponent},
+  {path: 'juegos', loadChildren: () => import('./modules/juegos/juegos-routing.module').then(m => m.JuegosRoutingModule)}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
