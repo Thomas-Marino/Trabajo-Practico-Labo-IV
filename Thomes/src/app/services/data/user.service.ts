@@ -11,7 +11,7 @@ export class UserService
 
   // BehaviorSubject para emitir el nombre del usuario
   private nombreUsuarioSubject = new BehaviorSubject<string>('');
-  nombreUsuario$ = this.nombreUsuarioSubject.asObservable();
+  observableNombreUsuario = this.nombreUsuarioSubject.asObservable();
 
   AsignarNombreUsuario(nombre: string): void 
   { 
