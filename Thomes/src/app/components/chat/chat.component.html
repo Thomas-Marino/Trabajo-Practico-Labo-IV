@@ -1,0 +1,23 @@
+<div class="chat-container" *ngIf="this.chatService.mostrarChat" [class.open]="chatAbierto">
+    <button class="chat-toggle" (click)="AlternarChat()">
+      Chat
+    </button>
+
+    <div class="chat-box" *ngIf="chatAbierto">
+        <div class="chat-header">
+            <h3>Bienvenido al chat!</h3>
+            <button class="close-btn" (click)="AlternarChat()">X</button>
+        </div>
+
+        <div class="chat-messages">
+            <div *ngFor="let mensajeObtenido of observableMensajes | async" class="mensajes">
+                <strong>{{ mensajeObtenido.usuario }} ({{mensajeObtenido.fechaMensajeFormateada}}):</strong> {{ mensajeObtenido.mensaje }}
+            </div>
+        </div>
+
+        <div class="chat-input">
+            <input [(ngModel)]="mensaje" (keyup.enter)="MandarMensaje()" placeholder="Escribe un mensaje...">
+            <button mat-button (click)="MandarMensaje()">Enviar</button>
+        </div>
+    </div>
+</div>
