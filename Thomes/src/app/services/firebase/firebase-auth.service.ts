@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { FirebaseError } from '@angular/fire/app';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { RouterService } from '../router.service';
-import { firstValueFrom, Observable } from 'rxjs';
+import { BehaviorSubject, firstValueFrom, Observable } from 'rxjs';
 
 export interface authResponse
 {
@@ -17,6 +17,9 @@ export interface authResponse
 export class AuthService {
 
   	constructor(public auth:AngularFireAuth, public router:RouterService) { }
+
+	private usuarioLogueadoSubject = new BehaviorSubject<boolean>(false);
+	observableFlagUsuarioLogueado = this.usuarioLogueadoSubject.asObservable();
 
 	async RegistrarNuevoUsuario(correo:string, password:string) : Promise<authResponse> 
 	{
@@ -85,6 +88,7 @@ export class AuthService {
 			{
 				console.log(`Usuario logueado existosamente! Correo: ${loginResponse.user?.email}`);
 				authResponse.mensajeExito = "Usuario logueado existosamente!";
+				this.usuarioLogueadoSubject.next(true);
 				return authResponse;
 			}
 
@@ -105,6 +109,7 @@ export class AuthService {
 		{
 			this.auth.signOut();
 			this.router.GoToLogin();
+			this.usuarioLogueadoSubject.next(false);
 		}
 		else
 		{
