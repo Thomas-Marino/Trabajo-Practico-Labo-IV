@@ -20,6 +20,9 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore'
 // ---- Variables de entorno
 import { environment } from '../environments/environment';
 import { RegistroComponent } from './components/registro/registro.component';
+import { ChatComponent } from './components/chat/chat.component';
+import { AhorcadoComponent } from './components/ahorcado/ahorcado.component';
+import { MayorMenorComponent } from './components/mayor-menor/mayor-menor.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { RegistroComponent } from './components/registro/registro.component';
     InicioComponent,
     HeaderComponent,
     QuienSoyComponent,
-    RegistroComponent
+    RegistroComponent,
+    ChatComponent,
+    AhorcadoComponent,
+    MayorMenorComponent
   ],
   imports: [
     BrowserModule, 
