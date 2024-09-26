@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit
   {
     const usuarioLogueado = localStorage.getItem("usuarioLogueado");
 
-    this.userService.nombreUsuario$.subscribe(nombre => { this.nombreUsuario = nombre; });
+    this.userService.observableNombreUsuario.subscribe(nombre => { this.nombreUsuario = nombre; });
     // añado validación contra localStorage por si se refresca la pagina, no perder los datos del usuario logueado.
     if(usuarioLogueado !== null) { this.nombreUsuario = usuarioLogueado; }
   }
