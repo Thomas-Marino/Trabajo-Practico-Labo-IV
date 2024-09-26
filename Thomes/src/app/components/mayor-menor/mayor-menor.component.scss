@@ -1,0 +1,35 @@
+@-webkit-keyframes gradientAnimation { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+@keyframes gradientAnimation { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+#contenedor {
+    background: linear-gradient(270deg, #49bdff, #ffffff);
+    background-size: 800% 800%;
+    height: 100%;
+    -webkit-animation: gradientAnimation 19s ease infinite; animation: gradientAnimation 19s ease infinite;
+}
+@-webkit-keyframes slide-in-blurred-left{0%{-webkit-transform:translateX(-1000px) scaleX(2.5) scaleY(.2);transform:translateX(-1000px) scaleX(2.5) scaleY(.2);-webkit-transform-origin:100% 50%;transform-origin:100% 50%;-webkit-filter:blur(40px);filter:blur(40px);opacity:0}100%{-webkit-transform:translateX(0) scaleY(1) scaleX(1);transform:translateX(0) scaleY(1) scaleX(1);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-filter:blur(0);filter:blur(0);opacity:1}}@keyframes slide-in-blurred-left{0%{-webkit-transform:translateX(-1000px) scaleX(2.5) scaleY(.2);transform:translateX(-1000px) scaleX(2.5) scaleY(.2);-webkit-transform-origin:100% 50%;transform-origin:100% 50%;-webkit-filter:blur(40px);filter:blur(40px);opacity:0}100%{-webkit-transform:translateX(0) scaleY(1) scaleX(1);transform:translateX(0) scaleY(1) scaleX(1);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-filter:blur(0);filter:blur(0);opacity:1}}
+.animacion { -webkit-animation:slide-in-blurred-left .6s cubic-bezier(.23,1.000,.32,1.000) both;animation:slide-in-blurred-left .6s cubic-bezier(.23,1.000,.32,1.000) both; }
+
+#contenedor-interacciones {
+    position: flex;
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+    button { 
+        font-size: larger;
+        color: black; 
+        background-color: white;
+        margin-top: 2rem;
+        margin-right: 2rem;
+        border: solid 1px black;
+    }
+}
+
+.card-mensajes {
+    margin-top: 5rem;
+    padding: 1rem;
+    background-color: #3a4f58;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}

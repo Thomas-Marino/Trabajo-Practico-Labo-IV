@@ -1,0 +1,31 @@
+<div id="contenedor">
+    <div class="row">
+        <div *ngIf="this.juegoIniciado" id="contenedor-dorso-cartas" class="col-md-6 imagenes">
+            <img src="/imgs/mayor-menor/dorso-cartas.png" alt="" height="414px" width="370px">
+        </div>
+        
+        <div *ngIf="this.juegoIniciado" id="contenedor-carta-mostrada" class="col-md-6 imagenes" [ngClass]="{ 'animacion': this.mostrarAnimacion }">
+            <img src="/imgs/mayor-menor/carta-{{this.valoresCartasMostrados[this.valoresCartasMostrados.length - 2]}}.png" alt="" height="400px" width="300px">
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col">
+            <mat-card class="card-mensajes" appearance="outlined">
+                <mat-card-header>
+                    <mat-card-title-group>
+                        <mat-card-title>{{this.mensaje}}</mat-card-title>
+                    </mat-card-title-group>
+                </mat-card-header>
+            </mat-card>
+        </div>
+    </div>
+
+    <div class="row">
+        <div id="contenedor-interacciones">
+            <button mat-stroked-button (click)="this.IniciarJuego()" *ngIf="!this.juegoIniciado">Comenzar!</button>
+            <button mat-button (click)="this.VerificarPrediccion('Mayor')" *ngIf="this.juegoIniciado">Mayor</button>
+            <button mat-button (click)="this.VerificarPrediccion('Menor')" *ngIf="this.juegoIniciado">Menor</button>
+        </div>
+    </div>
+</div>
