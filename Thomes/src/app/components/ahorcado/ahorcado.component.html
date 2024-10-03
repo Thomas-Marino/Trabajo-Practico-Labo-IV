@@ -1,1 +1,38 @@
-<p>ahorcado works!</p>
+<div class="contenedor-ahorcado">
+    <div class="row">
+        <div *ngIf="this.juegoIniciado" id="contenedor-estado-partida">
+            <img src="/imgs/ahorcado/ahorcado-e{{this.errores}}.png" height="400px" width="300px">
+            <span *ngFor="let letra of this.arrayPalabraSecreta">
+                <span *ngIf="this.listaLetrasCorrectas.includes(letra)" class="letras-correctas fuente-titulo">{{letra}}</span> 
+                <span *ngIf="!this.listaLetrasCorrectas.includes(letra)" class="letras-escondidas fuente-titulo">_</span> 
+            </span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div *ngIf="this.juegoIniciado" id="contenedor-letras">
+            <span *ngFor="let letra of this.listaLetrasDisponibles">
+                <button 
+                    *ngIf="this.listaLetrasIngresadas.includes(letra) == false" 
+                    (click)="this.VerificarPrediccion(letra)" 
+                    class="fuente-titulo letras-disponibles" 
+                    [disabled]="this.listaLetrasIngresadas.includes(letra)">
+                    {{letra}}
+                </button>
+                <!-- <button *ngIf="this.listaLetrasIngresadas.includes(letra) == true" disabled>{{letra}}</button> -->
+            </span>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col">
+            <h2 class="mensajes">{{this.mensaje}}</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div id="contenedor-interacciones">
+            <button class="fuente-titulo" (click)="this.IniciarJuego()" *ngIf="!this.juegoIniciado">Comenzar!</button>
+        </div>
+    </div>
+</div>
