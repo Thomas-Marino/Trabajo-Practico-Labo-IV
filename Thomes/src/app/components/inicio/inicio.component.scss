@@ -8,16 +8,12 @@
 .card {
     padding: 1rem;
     width: 300px;
-    // width: auto;
     height: 300px;
-    // height: 100%;
     border-radius: 10px;
     overflow: hidden;
-    background-color: rgb(45, 45, 53);
-    // position: relative;
     transition: all 0.3s ease;
-    // animation: pulsate 1.5s infinite alternate;  
     background: rgba(0, 0, 0, 0.2);
+    background-color: rgb(45, 45, 53);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);

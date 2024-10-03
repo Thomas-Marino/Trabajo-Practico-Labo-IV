@@ -1,7 +1,7 @@
 
 <mat-toolbar id="header-app">
     <p id="texto-img">
-        <img src="imgs/game.png"> 
+        <img src="imgs/iconos/game.png"> 
         Thomes
     </p>
     
@@ -10,7 +10,7 @@
     <button class="fuente-titulo btn-header" (click)="this.router.GoToQuienSoy()">Quién soy</button>        
     
     <div ngbDropdown *ngIf="this.nombreUsuario" class="d-inline-block">
-        <button class="btn fuente-titulo" id="dropdownBasic1" ngbDropdownToggle id="usuario"><img src="imgs/user.png" alt="mdo" width="32" height="32" class="rounded-circle"> {{ nombreUsuario }} </button>
+        <button class="btn fuente-titulo" id="dropdownBasic1" ngbDropdownToggle id="usuario"><img src="imgs/iconos/user.png" alt="mdo" width="32" height="32" class="rounded-circle"> {{ nombreUsuario }} </button>
         
         <div ngbDropdownMenu aria-labelledby="dropdownBasic">
             <button ngbDropdownItem (click)="CerrarSesion()">Cerrar Sesión</button>
