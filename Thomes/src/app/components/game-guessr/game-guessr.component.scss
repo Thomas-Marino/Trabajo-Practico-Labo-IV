@@ -1,0 +1,103 @@
+#contenedor-imagen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    img {
+        width: 400px;
+        height: 400px;
+        background-color: rgba(0, 0, 0, 0.404);
+        backdrop-filter: blur(10px);
+        margin-right: 1rem;
+        padding: 1rem;
+    }
+}
+
+#contenedor-inputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.404);
+    backdrop-filter: blur(10px);
+    margin-right: 1rem;
+    padding: 1rem;
+    input {
+        width: 50rem;
+        color: #fff;
+        font-size: 40px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        border: 0.2rem solid #fff;
+        border-radius: 2rem;
+        background-color: #24232c;
+        box-shadow: 
+        0 0 .2rem #fff,
+        0 0 .2rem #fff,
+        0 0 2rem #bc13fe,
+        0 0 0.8rem #bc13fe,
+        0 0 2.8rem #bc13fe,
+        inset 0 0 1.3rem #bc13fe; 
+        padding: 1rem;
+    }
+    button {
+        background-color: #6f00ff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        box-shadow: 
+        0 0 .2rem #fff,
+        0 0 .2rem #fff,
+        0 0 2rem #d713fe,
+        0 0 0.8rem #e313fe,
+        0 0 2.8rem #fe13fe,
+        inset 0 0 1.3rem #f613fe; 
+    }
+}
+
+.mensajes {
+    margin-top: 3rem;
+    display: flex;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    box-shadow: 
+    0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe,
+    0 0 2.8rem #bc13fe,
+    inset 0 0 1.3rem #bc13fe; 
+}
+
+#contenedor-interacciones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+        background-color: #6f00ff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        box-shadow: 
+        0 0 .2rem #fff,
+        0 0 .2rem #fff,
+        0 0 2rem #d713fe,
+        0 0 0.8rem #e313fe,
+        0 0 2.8rem #fe13fe,
+        inset 0 0 1.3rem #f613fe; 
+    }
+}

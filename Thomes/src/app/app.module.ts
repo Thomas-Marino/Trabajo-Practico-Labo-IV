@@ -23,6 +23,7 @@ import { RegistroComponent } from './components/registro/registro.component';
 import { ChatComponent } from './components/chat/chat.component';
 import { AhorcadoComponent } from './components/ahorcado/ahorcado.component';
 import { MayorMenorComponent } from './components/mayor-menor/mayor-menor.component';
+import { GameGuessrComponent } from './components/game-guessr/game-guessr.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { MayorMenorComponent } from './components/mayor-menor/mayor-menor.compon
     RegistroComponent,
     ChatComponent,
     AhorcadoComponent,
-    MayorMenorComponent
+    MayorMenorComponent,
+    GameGuessrComponent
   ],
   imports: [
     BrowserModule, 

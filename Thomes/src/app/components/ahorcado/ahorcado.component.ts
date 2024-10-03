@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './ahorcado.component.scss'
 })
 export class AhorcadoComponent {
-  
   juegoIniciado: boolean;
   listaLetrasDisponibles: string[];
   listaLetrasIngresadas: string[];
@@ -77,6 +76,7 @@ export class AhorcadoComponent {
     this.ObtenerPalabra();
     this.mensaje = "";
     this.errores = 0;
+    this.puntaje = 10;
   }
 
   FinalizarJuego(mensaje: string): void
@@ -88,8 +88,6 @@ export class AhorcadoComponent {
     this.listaLetrasCorrectas.length = 0;
     this.listaLetrasIngresadas.length = 0;
     this.listaLetrasDisponibles.length = 0;
-    this.errores = 0;
-    this.puntaje = 0;
   }
 
   IniciarArrayLetras(): void

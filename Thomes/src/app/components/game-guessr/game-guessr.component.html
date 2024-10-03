@@ -1,0 +1,26 @@
+<div class="contenedor-gameguessr">
+    <div class="row">
+        <div *ngIf="this.juegoIniciado" id="contenedor-imagen">
+            <img src="{{this.imagenSeleccionada}}" class="imagen-seleccionada">
+        </div>
+    </div>
+
+    <div class="row">
+        <div *ngIf="this.juegoIniciado" id="contenedor-inputs">
+            <input type="text" class="input-prediccion fuente-titulo" [(ngModel)]="this.prediccionIngresada">
+            <button class="fuente-titulo" (click)="VerificarPrediccion(this.prediccionIngresada.toLowerCase().trim())">Ingresar</button>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col">
+            <h2 class="mensajes">{{this.mensaje}}</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div id="contenedor-interacciones">
+            <button class="fuente-titulo" (click)="this.IniciarJuego()" *ngIf="!this.juegoIniciado">Comenzar!</button>
+        </div>
+    </div>
+</div>
