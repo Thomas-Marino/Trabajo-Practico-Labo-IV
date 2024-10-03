@@ -64,5 +64,22 @@ Trabajo práctico obligatorio para la aprobación de la materia Laboratorio de c
 1. Chat incorporado a nivel aplicación, implementando la validación solicitada
 2. Implementación de módulo "Juegos" como lazy-loading junto con sus rutas hijas /ahorcado y /mayor-menor
 3. Juegos incorporados:
-    - Ahorcado: Pendiente.
+    - Ahorcado: Incorporado.
     - Mayor-menor: Incorporado. 
+
+## Sprint 4 - 
+1. Agregar el juego Preguntados
+    - Tiene que obtener las imágenes de una api.
+    - Realizar el llamado a la api desde un Service.
+    - Dar al jugador opciones de elección. No se puede ingresar datos por teclado.
+2. Juego propio
+    - Realizar juego propio.
+    - Juegos que no se pueden utilizar
+      . TATETI
+      . MEMOTEST
+      . PIEDRA PAPEL O TIJERA
+    - Agregar descripción de su juego en la sección “Quién soy”. Debe contar con información de qué juego es y cómo se juega.
+### Implementaciones realizadas:
+1. Incorporación pendiente.
+2. Implementación de juego propio + explicación en quién soy implementada.
+3. Se realizaron los cambios de estilos para toda la aplicación solicitados en el sprint 3
