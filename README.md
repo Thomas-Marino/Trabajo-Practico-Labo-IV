@@ -47,4 +47,22 @@ Trabajo práctico obligatorio para la aprobación de la materia Laboratorio de c
 - Favicon actualizado.
 - Implementación de nuevos servicios para:
   - Pasar data entre componentes (usuarios).
-  - Guardar datos en firebase storage. 
+  - Guardar datos en firebase storage.
+
+## Sprint 3 - 
+1. Incorporar el chat.
+    - Solamente usuarios logueados podrán acceder a la sala de chat.
+    - Debemos marcar el usuario y hora que envió el mensaje.
+2. Incorporar módulos y loadchildren.
+3. Incorporar los juegos:
+    - Ahorcado:
+        . No se debe ingresar datos desde el teclado. Utilizar botones para el ingreso de las letras.
+    - Mayor o Menor:
+        . Desde un mazo de carta se va a preguntar si la siguiente es mayor o menor.
+        . El jugador sumará un punto ante cada carta que adivine.
+### Implementaciones realizadas:
+1. Chat incorporado a nivel aplicación, implementando la validación solicitada
+2. Implementación de módulo "Juegos" como lazy-loading junto con sus rutas hijas /ahorcado y /mayor-menor
+3. Juegos incorporados:
+    - Ahorcado: Pendiente.
+    - Mayor-menor: Incorporado. 
