@@ -115,7 +115,7 @@ export class GameGuessrComponent {
     if(!coincidencia)
     {
       this.mensaje = this.mensajesError[Math.floor(Math.floor(Math.random() * this.mensajesError.length))]
-      this.errores++;
+      this.errores = this.errores + 4;
       if(this.errores == 3) { this.FinalizarJuego(`Buena suerte la próxima...`) }
     }
 

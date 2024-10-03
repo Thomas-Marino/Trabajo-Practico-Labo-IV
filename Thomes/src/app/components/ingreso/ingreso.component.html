@@ -6,28 +6,40 @@
       
         <mat-card-content>
             <form class="form-ingreso">
-                <mat-form-field id="campo-correo" appearance="outline" class="full-width inputs">
+                <div class="inputs">
+                    <!-- <label for="campo-correo" class="fuente-titulo">Ingrese su correo:</label> -->
+                    <!-- <br> -->
+                    <input type="email" id="campo-correo" class="input-correo fuente-titulo" name="usuario" placeholder="Ingrese su correo:" [(ngModel)]="this.usuario">
+                </div>
+
+                <!-- <mat-form-field id="campo-correo" appearance="outline" class="full-width inputs">
                     <mat-label>Email</mat-label>
                     <input type="email" matInput [(ngModel)]="this.usuario" name="usuario" placeholder="Ingrese el correo con el que se registro...">
-                </mat-form-field>
+                </mat-form-field> -->
                 
                 <br>
-
-                <mat-form-field id="campo-password" appearance="outline" class="full-width inputs">
+                <br>
+                
+                <div class="inputs">
+                    <!-- <label for="campo-pass" class="fuente-titulo">Ingrese su contraseña:</label> -->
+                    <!-- <br> -->
+                    <input type="password" id="campo-pass" class="input-pass fuente-titulo" name="password" placeholder="Ingrese su contraseña" [(ngModel)]="this.password">
+                </div>
+                <!-- <mat-form-field id="campo-password" appearance="outline" class="full-width inputs">
                     <mat-label>Contraseña</mat-label>
                     <input type="password" matInput [(ngModel)]="this.password" name="password" placeholder="Ingrese su contraseña...">
-                </mat-form-field>
+                </mat-form-field> -->
 
-                <button mat-button id="btn_iniciar_sesion" class="md-width" (click)="IniciarSesion(this.usuario, this.password)">Iniciar sesion</button>
+                <button id="btn_iniciar_sesion" class="md-width fuente-titulo" (click)="IniciarSesion(this.usuario, this.password)">Iniciar sesion</button>
 
                 <br>
                 
-                <button mat-button class="btn_acceso_rapido cursor-btn" (click)="InicioSesionRapido('prueba')"> <img src="imgs/iconos/autoCompletar.png" height="42px" width="42">autoCompletar</button>
+                <button class="btn_acceso_rapido fuente-titulo" (click)="InicioSesionRapido('prueba')"> <img src="imgs/iconos/autoCompletar.png" height="42px" width="42">autoCompletar</button>
             </form>
         </mat-card-content>
     </mat-card>
     <br>
-    <mat-label>
+    <mat-label class="fuente-titulo">
         ¿No tiene cuenta? 
         <button id="btn-registrar" mat-button routerLink="/registro">Registrese aquí.</button> 
     </mat-label>

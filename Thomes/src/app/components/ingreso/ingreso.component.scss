@@ -13,6 +13,30 @@
     flex-direction: column; // Alinea los elementos en forma de columna 
 }
 
+label {
+    margin-bottom: 1rem;
+}
+
+input {
+    width: 50rem;
+    color: #fff;
+    font-size: 20px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    background-color: #24232c;
+    box-shadow: 
+    0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe,
+    0 0 2.8rem #bc13fe,
+    inset 0 0 1.3rem #bc13fe; 
+    padding: 1rem;
+}
+
 .titulo {
     background: linear-gradient(to right, #c403ff, #ff0000);
     -webkit-text-fill-color: transparent;
@@ -64,21 +88,35 @@ form
 
 #btn_iniciar_sesion
 {
-    background-color: #c129c6;
+    margin-top: 3rem;
+    background-color: rgb(195, 0, 255);
     color: white;
-    margin-top: 10px;
-    font-size: 1rem;
-    border-radius: 0.5rem;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
     box-shadow: 
-    0 0 .2rem #707070,
-    0 0 .2rem #000000,
-    0 0 2rem #bc13fe,
-    0 0 0.8rem #bc13fe,
-    0 0 2.8rem #bc13fe,
-    inset 0 0 1.3rem #bc13fe; 
+    0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem #d713fe,
+    0 0 0.8rem #e313fe,
+    0 0 2.8rem #fe13fe,
+    inset 0 0 1.3rem #f613fe; 
 }
 
-#btn-registrar {font-size: larger; background: rgba(0, 0, 0, 0.616);
+.btn_acceso_rapido {
+    background: rgba(0, 0, 255, 0.233);
+    border: none;
+    color: rgb(255, 255, 255);
+    border: 1px solid black;
+    border-radius: 2rem;
+    padding: 5px;
+    img {
+        margin-left: 5px;
+    }
+}
+
+#btn-registrar {
+    font-size: larger; background: rgba(0, 0, 0, 0.616);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
