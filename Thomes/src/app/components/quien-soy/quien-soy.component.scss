@@ -1,47 +1,61 @@
-#contenedor_main_quien_soy
-{
-    min-width: 100vw;
-    min-height: 100vh;
-    background: radial-gradient(50% 50% at 50% 50%, #e1f3ff 51.04%, #ededed 100%);
-    // margin-top: 15rem;
+#contenedor-biografia, #contenedor-explicacion-juego { 
+    margin-top: 2rem; 
+    margin-left: 1rem;
+    padding: 1rem;
 }
 
-#biografia
-{
-    padding-top: 2rem;
-    // border-radius: 2px;
-    // margin-top: 15rem;
-    background-color: #2e2e2eda;
-    max-width: 95%;
-    margin-inline: auto;
-    box-shadow: 0px 0px 34px -4px rgba(0,0,0,0.59);
-    -webkit-box-shadow: 0px 0px 34px -4px rgba(0,0,0,0.59);
-    -moz-box-shadow: 0px 0px 34px -4px rgba(0,0,0,0.59);
+.biografia, .explicacion-juego {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    transition: width 0.3s ease;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 2rem;
+    width: 100%;
 }
 
-.card
-{
-    box-shadow: 0px 0px 34px -4px rgba(0,0,0,0.59);
-    -webkit-box-shadow: 0px 0px 34px -4px rgba(0,0,0,0.59);
-    -moz-box-shadow: 0px 0px 34px -4px rgba(0,0,0,0.59);
-    min-width: 100%;
-    margin-left: 5rem;
-    font-size: 1.25rem;
+img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10rem;
+    padding: 1rem;
 }
 
-img
-{
-    border-radius: 15rem;
-    margin-top: 1rem;
+.descripcion {
+    margin-left: 8rem;
+    font-size: 17px;
+    position: absolute;
+    top: 0;
+    left: 200px;
+    width: 80%;
+    height: 100%;
+    word-break: normal;
+    color: #fff;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.76);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 0.2rem solid #fff;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 
+    0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe,
+    0 0 2.8rem #bc13fe,
+    inset 0 0 1.3rem #bc13fe; 
+    padding: 10px;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease;
 }
 
-.relleno
-{
-    min-height: 3rem;
-    max-width: 5rem;
-}
-
-.columnas-contenedoras
-{
-    background-color: rgb(221, 221, 221);
-}

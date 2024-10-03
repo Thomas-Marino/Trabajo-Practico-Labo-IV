@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrl: './quien-soy.component.scss'
 })
 export class QuienSoyComponent {
+  descripcionMostrada: boolean = false;
 
+  Expandir(): void 
+  {
+    this.descripcionMostrada = true;
+  }
+
+  Cerrar(): void 
+  {
+    this.descripcionMostrada = false;
+  }
 }
