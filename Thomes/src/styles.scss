@@ -2,6 +2,40 @@
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
-body { overflow: hidden; } 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap');
+body {
+    overflow: hidden;
+    cursor: url("../public/cursor/NeonCursor03-Purple.cur"), auto;
+    margin: 0;
+    height: 100%;
+    background: url("../public/imgs/bg-animado.gif");
+    background-size:contain;
+    background-position-y: 10%;
+    // background-repeat:no-repeat; /* Evita que la imagen se repita */
+}
+
+button, mat-button, .routerLink {cursor: url("../public/cursor/NeonLinkSelect03-Purple.cur"), pointer !important;}
+
+html {
+    height: 100%;
+}
+
+* { font-family: "Exo 2", sans-serif !important; }
+
+.fuente-titulo {
+  font-family: "Sixtyfour", sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fuente-titulo-grande {
+    font-family: "Sixtyfour", sans-serif !important;
+    font-optical-sizing: auto;
+    font-size: 26px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+mat-card-header { font-family: "Sixtyfour", sans-serif; }

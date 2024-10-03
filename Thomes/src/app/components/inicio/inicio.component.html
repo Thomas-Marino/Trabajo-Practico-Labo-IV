@@ -1,110 +1,89 @@
 <div class="contenedor-juegos">
     <div class="row">
-        <div class="col-md-6">
-
-            <mat-card class="example-card" appearance="outlined">
-                <mat-card-header>
-                    <mat-card-title-group>
-
-                        <mat-card-title>Ahorcado</mat-card-title>
-                        <mat-card-subtitle>
-                            El ahorcado es un popular juego para dos o más jugadores. Un jugador debe pensar en una palabra u 
-                            objeto y el otro o los otros deben tratar de adivinarla según letra por letra dentro de un cierto número de oportunidades.
-                            <br>
-                            <br>
-                            - Reglas:
-                            <br>
-                               . Si la letra elegida por un jugador está dentro de la palabra u objeto a adivinar, la misma será tachada y se mostrará en que posición corresponde.
-                            <br>
-                               . Si la letra elegida por un jugador NO está dentro de la palabra u objeto a adivinar, la misma será tachada y se perderá una oportunidad.
-                        </mat-card-subtitle>
-                        <img mat-card-xl-image src="imgs/ahorcado.png" alt="foto ahorcado">
-                    </mat-card-title-group>
-                </mat-card-header>
-
-                <mat-card-actions>
-                    <button mat-button routerLink="/juegos/ahorcado">A jugar!</button>
-                </mat-card-actions>
-            </mat-card>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="imgs/ahorcado.png" class="card-image" height="64px" width="64px" alt="foto ahorcado">
+                <h2 class="titulo-juego fuente-titulo">Ahorcado</h2>
+                <div class="card-content">
+                    <p class="card-description">
+                        Pon a prueba tu agilidad mental en el ahorcado!.
+                        <br>
+                        <br>
+                        Reglas:
+                        <br>
+                            . Si la letra elegida está dentro de la palabra adivinar, la misma será tachada y se mostrará en que posición corresponde.
+                        <br>
+                            . Si la letra elegida NO está dentro de la palabra a adivinar, la misma será tachada y se perderá una oportunidad.
+                    </p>
+                    <button class="card-button fuente-titulo" routerLink="/juegos/ahorcado">¡A Jugar!</button>
+                </div>
+            </div>
         </div>
 
-        <div class="col-md-6">
-            <mat-card class="example-card" appearance="outlined">
-                <mat-card-header>
-                    <mat-card-title-group>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="imgs/mayorMenor.png" class="card-image" height="64px" width="64px" alt="foto mayor o menor">
+                
+                <h2 class="titulo-juego fuente-titulo">Mayor Menor</h2>
 
-                        <mat-card-title>Mayor o menor</mat-card-title>
-                        <mat-card-subtitle>
-                            Mayor o menor es un popular juego de cartas para dos jugadores. Un jugador debe ser el encargado de voltear las cartas, 
-                            mientras que el otro jugador debe predecir si la carta que esta por darse vuelta será mayor o menor que la carta en mesa.
-                            <br>
-                            <br>
-                            - Reglas:
-                            <br>
-                               . Si la predicción es correcta, el jugador ganará un punto
-                            <br>
-                               . Si la predicción es incorrecta, el jugador no ganará ningún punto.
-                               <br>
-                               . Puntaje máximo: 5 puntos.
-                        </mat-card-subtitle>
-                        <img mat-card-xl-image src="imgs/mayorMenor.png" alt="foto mayor o menor">
-                    </mat-card-title-group>
-                </mat-card-header>
+                <div class="card-content">
+                    <p class="card-description">
+                    Pon a prueba tu suerte y memoria en Mayor o menor!
+                    <br>
+                    <br>
+                    - Reglas:
+                    <br>
+                        . Si la predicción es correcta, el jugador ganará un punto
+                    <br>
+                        . Si la predicción es incorrecta, el jugador no ganará ningún punto.
+                        <br>
+                        . Puntaje máximo: 5 puntos.
+                    </p>
 
-                <mat-card-actions>
-                    <button mat-button routerLink="/juegos/mayor-menor">A jugar!</button>
-                </mat-card-actions>
-            </mat-card>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <mat-card class="example-card" appearance="outlined">
-                <mat-card-header>
-                    <mat-card-title-group>
-
-                        <mat-card-title>Preguntados</mat-card-title>
-                        <mat-card-subtitle>
-                            Preguntados es un juego de un jugador basado en responder las preguntas que se presentan en el juego, 
-                            cuyas respuestas deben ser escogidas en formato de 'multiple choice'.
-                            <br>
-                            <br>
-                            - Reglas:
-                            <br>
-                               . Si la predicción es correcta, el jugador ganará un punto
-                            <br>
-                               . Si la predicción es incorrecta, el jugador no ganará ningún punto.
-                               <br>
-                               . Puntaje máximo: 5 puntos.
-                        </mat-card-subtitle>
-                        <img mat-card-xl-image src="imgs/choose.png" alt="foto preguntados">
-                    </mat-card-title-group>
-                </mat-card-header>
-
-                <mat-card-actions>
-                    <button mat-button>próximamente!</button>
-                </mat-card-actions>
-            </mat-card>
+                    <button class="card-button fuente-titulo" routerLink="/juegos/mayor-menor">¡A Jugar!</button>
+                </div>
+            </div>
         </div>
 
-        <div class="col-md-6">
-            <mat-card class="example-card" appearance="outlined">
-                <mat-card-header>
-                    <mat-card-title-group>
+        <div class="col-md-3">
+            <div class="card">
+                <img src="imgs/choose.png" alt="Preguntados" height="64px" width="64px" class="card-image">
 
-                        <mat-card-title>Juego propio</mat-card-title>
-                        <mat-card-subtitle>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae doloremque dolorum reprehenderit quaerat! Velit, unde. 
-                            Aliquid id praesentium, non expedita, maiores necessitatibus voluptatum ex illo cupiditate rem, maxime quisquam architecto!
-                        </mat-card-subtitle>
-                        <img mat-card-xl-image src="imgs/question-mark.png" alt="foto ahorcado">
-                    </mat-card-title-group>
-                </mat-card-header>
+                <h2 class="titulo-juego fuente-titulo">Preguntados</h2>
 
-                <mat-card-actions>
-                    <button mat-button>próximamente!</button>
-                </mat-card-actions>
-            </mat-card>
+                <div class="card-content">
+                    <p class="card-description">
+                        Pon a prueba tu conocimiento en Preguntados!
+                        <br><br>
+                        - Reglas:
+                        <br>
+                        . Si la predicción es correcta, el jugador ganará un punto
+                        <br>
+                        . Si la predicción es incorrecta, el jugador no ganará ningún punto.
+                        <br>
+                        . Puntaje máximo: 5 puntos.
+                    </p>
+
+                    <button class="card-button fuente-titulo">¡A Jugar!</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card">
+                <img src="imgs/question-mark.png" class="card-image" height="64px" width="64px" alt="foto juego propio">
+
+                <h2 class="titulo-juego fuente-titulo">Juego propio</h2>
+
+                <div class="card-content">
+                    <p class="card-description">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae doloremque dolorum reprehenderit quaerat! Velit, unde. 
+                        Aliquid id praesentium, non expedita, maiores necessitatibus voluptatum ex illo cupiditate rem, maxime quisquam architecto!
+                    </p>
+
+                    <button class="card-button fuente-titulo">¡A Jugar!</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>

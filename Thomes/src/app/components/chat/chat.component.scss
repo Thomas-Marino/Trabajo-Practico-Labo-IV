@@ -1,35 +1,48 @@
-.chat-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-}
-
-.chat-toggle {
-    background-color: #0084ff;
+.activador-chat {
+    background-color: #6f00ff;
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
 }
 
+.chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    box-shadow: 
+    0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem #d713fe,
+    0 0 0.8rem #e313fe,
+    0 0 2.8rem #fe13fe,
+    inset 0 0 1.3rem #f613fe; 
+    background-color: #25242e;
+}
+
 .chat-box {
     width: 600px;
     height: 700px;
-    background-color: white;
+    background: url("../../../../public/imgs/bg2.jpg");
+    background-size:auto;
+    background-repeat: no-repeat;
+    background-position-y: 5rem;
+    background-position-x: center;
     border: 1px solid #ccc;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
 }
 
+@keyframes flicker {0%, 18%, 22%, 25%, 53%, 57%, 100% {text-shadow: 0 0 7px #fff,0 0 10px #fff, 0 0 21px #fff,0 0 42px #13fe89, 0 0 82px #13f6fe,0 0 92px #bc13fe, 0 0 102px #bc13fe,0 0 151px #bc13fe;}20%, 24%, 55% { text-shadow: none;}}
 .chat-header {
-    background-color: #0084ff;
+    background-color: #25242e;
     color: white;
     padding: 10px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    text-align: center;
+    animation: flicker 1.5s infinite alternate;
 }
 
 .close-btn {
@@ -39,13 +52,52 @@
     font-size: 18px;
 }
 
-.chat-messages {
-    flex-grow: 1;
+.chat-msj {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 100%; 
+    padding: 1rem;
     overflow-y: auto;
-    padding: 10px;
 }
 
-.mensajes { margin-bottom: 10px; }
+.mensajes {
+    align-self: flex-start;
+    margin-bottom: 10px;
+    border-radius: 1rem;
+    padding: 10px;
+    max-width: 60%;
+    background-color: rgb(255, 120, 194, 0.404);
+    backdrop-filter: blur(10px);
+    box-shadow: 
+    0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem #d713fe,
+    0 0 0.8rem #e313fe,
+    0 0 2.8rem #fe13fe,
+    inset 0 0 1.3rem #f613fe; 
+    word-wrap: break-word; /* Permite que las palabras largas se dividan en varias líneas */
+}
+
+.mensajes-usuario-logueado {
+    align-self: flex-end; 
+    height: min-content;
+    margin-bottom: 10px;
+    text-align: left; 
+    max-width: 60%; 
+    border-radius: 1rem;
+    padding: 10px;
+    word-wrap: break-word;
+    background-color: rgba(255, 195, 105, 0.404);
+    backdrop-filter: blur(10px);
+    box-shadow: 
+    0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem #fea013,
+    0 0 0.8rem #fe9013,
+    0 0 2.8rem #feac13,
+    inset 0 0 1.3rem #feb413; 
+}
 
 .chat-input { padding: 10px; }
 
@@ -58,10 +110,12 @@
 }
 
 .chat-input button {
-    background-color: #0084ff;
+    background-color: #cc00ff;
     color: white;
     border: none;
     padding: 5px 10px;
 }
+
+input {width: 85%;}
 
 .open .chat-box { display: flex; }

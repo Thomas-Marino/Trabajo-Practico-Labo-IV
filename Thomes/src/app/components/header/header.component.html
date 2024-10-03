@@ -1,19 +1,20 @@
 
 <mat-toolbar id="header-app">
-    <span>
+    <p id="texto-img">
         <img src="imgs/game.png"> 
         Thomes
-    </span>
+    </p>
     
-    <a mat-button color="primary" (click)="this.router.GoToHome()">Inicio</a>        
-    <a mat-button *ngIf="this.nombreUsuario == ''" color="primary" (click)="this.router.GoToLogin()">Ingreso</a>        
-    <a mat-button color="primary" (click)="this.router.GoToQuienSoy()">Quién soy</a>        
+    <button class="fuente-titulo btn-header" (click)="this.router.GoToHome()">Inicio</button>        
+    <button class="fuente-titulo btn-header" *ngIf="this.nombreUsuario == ''" (click)="this.router.GoToLogin()">Ingreso</button>        
+    <button class="fuente-titulo btn-header" (click)="this.router.GoToQuienSoy()">Quién soy</button>        
     
     <div ngbDropdown *ngIf="this.nombreUsuario" class="d-inline-block">
-        <button class="btn" id="dropdownBasic1" ngbDropdownToggle><img src="imgs/user.png" alt="mdo" width="32" height="32" class="rounded-circle"> {{ nombreUsuario }} </button>
+        <button class="btn fuente-titulo" id="dropdownBasic1" ngbDropdownToggle id="usuario"><img src="imgs/user.png" alt="mdo" width="32" height="32" class="rounded-circle"> {{ nombreUsuario }} </button>
         
         <div ngbDropdownMenu aria-labelledby="dropdownBasic">
             <button ngbDropdownItem (click)="CerrarSesion()">Cerrar Sesión</button>
         </div>
     </div>
 </mat-toolbar>
+<div id="linea"></div>

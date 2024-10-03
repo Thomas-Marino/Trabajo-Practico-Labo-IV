@@ -1,19 +1,19 @@
 <div id="contenedor-ingreso">
     <mat-card>
         <mat-card-header>
-            <mat-card-title>Bienvenido a Thomes!</mat-card-title>
+            <mat-card-title>Bienvenido a <strong class="fuente-titulo-grande titulo">Thomes</strong></mat-card-title>
         </mat-card-header>
       
         <mat-card-content>
             <form class="form-ingreso">
-                <mat-form-field id="campo-correo" appearance="outline" class="full-width">
+                <mat-form-field id="campo-correo" appearance="outline" class="full-width inputs">
                     <mat-label>Email</mat-label>
                     <input type="email" matInput [(ngModel)]="this.usuario" name="usuario" placeholder="Ingrese el correo con el que se registro...">
                 </mat-form-field>
                 
                 <br>
 
-                <mat-form-field id="campo-password" appearance="outline" class="full-width">
+                <mat-form-field id="campo-password" appearance="outline" class="full-width inputs">
                     <mat-label>Contraseña</mat-label>
                     <input type="password" matInput [(ngModel)]="this.password" name="password" placeholder="Ingrese su contraseña...">
                 </mat-form-field>
@@ -22,13 +22,13 @@
 
                 <br>
                 
-                <button mat-button class="btn_acceso_rapido" (click)="InicioSesionRapido('prueba')"> <img src="imgs/autoCompletar.png" height="42px" width="42">autoCompletar</button>
+                <button mat-button class="btn_acceso_rapido cursor-btn" (click)="InicioSesionRapido('prueba')"> <img src="imgs/autoCompletar.png" height="42px" width="42">autoCompletar</button>
             </form>
         </mat-card-content>
     </mat-card>
     <br>
     <mat-label>
         ¿No tiene cuenta? 
-        <a mat-button routerLink="/registro">Registrese aquí.</a> 
+        <button id="btn-registrar" mat-button routerLink="/registro">Registrese aquí.</button> 
     </mat-label>
 </div>
