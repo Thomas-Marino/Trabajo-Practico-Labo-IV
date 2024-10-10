@@ -59,3 +59,24 @@ img {
     transition: opacity 0.3s ease;
 }
 
+.encuesta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // margin-top: 5rem;
+    gap: 25px;
+    button {
+        background-color: #6f00ff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        box-shadow: 
+        0 0 .2rem #fff,
+        0 0 .2rem #fff,
+        0 0 2rem #d713fe,
+        0 0 0.8rem #e313fe,
+        0 0 2.8rem #fe13fe,
+        inset 0 0 1.3rem #f613fe; 
+    }
+}
