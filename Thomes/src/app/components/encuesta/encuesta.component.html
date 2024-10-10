@@ -1,0 +1,72 @@
+<form [formGroup]="this.encuestaForm" (ngSubmit)="GuardarRespuestas()" *ngIf="!this.respuestaGuardada">
+    <div class="row">
+      <label for="nombreApellido" class="fuente-titulo">Nombre y Apellido</label>
+      <input id="nombreApellido" class="fuente-titulo inputTexto" formControlName="nombreApellido" />
+      <div *ngIf="encuestaForm.get('nombreApellido')?.invalid && encuestaForm.get('nombreApellido')?.touched">
+        El nombre es requerido y debe tener al menos 3 caracteres.
+      </div>
+    </div>
+    
+    <br>
+
+    <div class="row">
+      <label for="edad" class="fuente-titulo">Edad</label>
+      <input id="edad" class="fuente-titulo inputTexto" formControlName="edad" type="number"/>
+      <div *ngIf="encuestaForm.get('edad')?.invalid && encuestaForm.get('edad')?.touched">
+        Debe ser mayor de 18 y menor de 99 años.
+      </div>
+    </div>
+  
+    <br>
+
+    <div class="row">
+      <label for="telefono" class="fuente-titulo">Teléfono</label>
+      <input id="telefono" class="fuente-titulo inputTexto" formControlName="telefono"/>
+      <div *ngIf="encuestaForm.get('telefono')?.invalid && encuestaForm.get('telefono')?.touched">
+        El teléfono debe contener solo números y tener máximo 10 dígitos.
+      </div>
+    </div>
+
+    <br>
+    
+    <div class="row">
+      <label class="fuente-titulo">¿Te divertiste jugando los juegos en Thomes?</label>
+      <div>
+        <label class="fuente-titulo"><input type="radio" formControlName="seDivirtio" value="Si" /> Sí </label>
+        <label class="fuente-titulo"><input type="radio" formControlName="seDivirtio" value="No"/> No </label>
+      </div>
+    </div>
+  
+    <br>
+
+    <div class="row">
+      <label for="juegoFavorito" class="fuente-titulo">Cual fue tu juego favorito?</label>
+      <select name="select" class="fuente-titulo" formControlName="juegoFavorito">
+        <option value="Ahorcado" class="fuente-titulo" formControlName="juegoFavorito">Ahorcado</option>
+        <option value="Mayor Menor" class="fuente-titulo" formControlName="juegoFavorito">Mayor Menor</option>
+        <option value="Preguntados" class="fuente-titulo" formControlName="juegoFavorito">Preguntados</option>
+        <option value="GameGuessr" class="fuente-titulo" formControlName="juegoFavorito">GameGuessr</option>
+      </select>
+    </div>
+
+    <br>
+    
+    <div class="row">
+      <label for="opinion" class="fuente-titulo">Deja tu comentario para que podamos leerte!</label>
+      <input id="opinion" class="inputTexto" formControlName="opinion"/>
+    </div>
+  
+    <br>
+
+    <button type="submit" class="fuente-titulo btn" [disabled]="encuestaForm.invalid">Enviar</button>
+</form>
+
+<div class="row" class="contenedor-fila-agradecimiento" *ngIf="this.respuestaGuardada">
+    <div class="contenedor-agradecimiento col">
+        <img src="imgs/encuesta/cara-guinando.png" height="200px" width="200px">
+        <div class="descripcion">
+            <h3 class="agradecimiento fuente-titulo">Muchas gracias por tomarte el tiempo de completar nuestra encuesta!</h3>
+        </div>
+    </div>
+    <button class="md-width fuente-titulo btn" routerLink="/home">Inicio</button>
+</div>

@@ -1,0 +1,121 @@
+form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 17px;
+    width: 80%;
+    color: #fff;
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 
+    0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe,
+    0 0 2.8rem #bc13fe,
+    inset 0 0 1.3rem #bc13fe; 
+    padding: 3rem;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease;
+    select {
+        width: 50rem;
+        // font-size: 2rem;
+        color: #fff;
+        height: 2.5rem;
+        margin-top: .5rem;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 0.2rem solid #fff;
+        border-radius: 2rem;
+        background-color: #24232c;
+        box-shadow: 
+        0 0 .2rem #fff,
+        0 0 .2rem #fff,
+        0 0 2rem #bc13fe,
+        0 0 0.8rem #bc13fe,
+        0 0 2.8rem #bc13fe,
+        inset 0 0 1.3rem #bc13fe; 
+    }
+}
+
+.inputTexto {
+    width: 50rem;
+    color: #fff;
+    height: 1rem;
+    margin-top: .5rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    background-color: #24232c;
+    box-shadow: 
+    0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe,
+    0 0 2.8rem #bc13fe,
+    inset 0 0 1.3rem #bc13fe; 
+    padding: 1rem;
+}
+
+.btn {
+    margin-top: 3rem;
+    background-color: rgb(195, 0, 255);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 
+    0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem #d713fe,
+    0 0 0.8rem #e313fe,
+    0 0 2.8rem #fe13fe,
+    inset 0 0 1.3rem #f613fe; 
+}
+
+@-webkit-keyframes fade-in-fwd{0%{-webkit-transform:translateZ(-80px);transform:translateZ(-80px);opacity:0}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}@keyframes fade-in-fwd{0%{-webkit-transform:translateZ(-80px);transform:translateZ(-80px);opacity:0}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}
+.contenedor-fila-agradecimiento {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    width: 95%;
+    height: auto;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    box-shadow: 
+    0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe,
+    0 0 2.8rem #bc13fe,
+    inset 0 0 1.3rem #bc13fe; 
+    button {
+        display: block;      /* Para que el botón tome todo el ancho disponible */
+        margin: 0 auto;
+        -webkit-animation:fade-in-fwd .6s cubic-bezier(.39,.575,.565,1.000) infinite alternate both;animation:fade-in-fwd .6s cubic-bezier(.39,.575,.565,1.000) infinite alternate both;
+    }
+    .contenedor-agradecimiento {
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+        flex-direction: column;
+        img {
+            margin-bottom: 1rem;
+            object-fit: cover;  
+        }
+        .agradecimiento {color: white;}
+    }
+}
