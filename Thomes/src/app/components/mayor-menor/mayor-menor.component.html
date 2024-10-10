@@ -5,7 +5,7 @@
         </div>
         
         <div *ngIf="this.juegoIniciado" id="contenedor-carta-mostrada" class="col-md-6 imagenes" [ngClass]="{ 'animacion': this.mostrarAnimacion }">
-            <img src="/imgs/mayor-menor/carta-{{this.valoresCartasMostrados[this.valoresCartasMostrados.length - 2]}}.png" alt="" height="400px" width="300px">
+            <img src="{{this.imagenesCartasMostrados[this.imagenesCartasMostrados.length - 2]}}" alt="" height="400px" width="300px">
         </div>
     </div>
     
