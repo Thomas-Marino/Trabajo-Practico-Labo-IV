@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="card" *ngIf="this.juegoIniciado">
+        <img src="{{this.fotoSeleccionada}}" alt="Preguntados" class="card-image">
+
+        <h3 class="pregunta fuente-titulo">{{preguntaSeleccionada.question}}</h3>
+
+        <div class="card-content">
+            <div class="botones-respuestas" *ngFor="let respuesta of respuestasObtenidas">
+                <button class="btn fuente-titulo" (click)="VerificarPrediccion(respuesta)" [ngClass]="{'respuestaCorrecta': respuestaCorrecta && this.preguntaSeleccionada.correctAnswers == respuesta}">{{ respuesta }}</button>
+            </div>
+
+            <p class="fuente-titulo">Puntaje: {{this.puntaje}}</p>
+        </div>
+    </div>
+</div>
+
+<div class="row" *ngIf="!this.juegoIniciado">
+    <div class="col">
+        <h2 class="mensaje-bienvenida">{{this.mensaje}}</h2>
+    </div>
+</div>
+
+<div class="row">
+    <div id="contenedor-interacciones" *ngIf="!this.juegoIniciado">
+        <button class="fuente-titulo" (click)="this.IniciarJuego('history')">Historia</button>
+        <button class="fuente-titulo" (click)="this.IniciarJuego('sports%26leisure')">Deportes</button>
+        <button class="fuente-titulo" (click)="this.IniciarJuego('science%26nature')">Ciencia</button>
+        <button class="fuente-titulo" (click)="this.IniciarJuego('entertainment')">Entretenimiento</button>
+        <button class="fuente-titulo" (click)="this.IniciarJuego('arts%26literature')">Arte</button>
+        <button class="fuente-titulo" (click)="this.IniciarJuego('geography')">Geografia</button>
+    </div>
+</div>
