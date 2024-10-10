@@ -14,19 +14,13 @@ export class ChatComponent implements OnInit{
   fireStoreService = inject(FirebaseStoreService);
   fireAuthService = inject(AuthService);
   chatService = inject(ChatService);
-  
 
   observableMensajes: Observable<IMensaje[]>;
   mensaje: string = '';
   chatAbierto: boolean = false;
   usuarioLogueado: string = "";
-	// this.chat.observableNombreUsuario.subscribe(nombre => { this.nombreUsuario = nombre; });
 
-
-  constructor() 
-  {
-    this.observableMensajes = this.chatService.ObtenerMensajes();
-  }
+  constructor() { this.observableMensajes = this.chatService.ObtenerMensajes(); }
 
   async ngOnInit(): Promise<void> {
     this.usuarioLogueado = await this.fireAuthService.ObtenerUsuario();
