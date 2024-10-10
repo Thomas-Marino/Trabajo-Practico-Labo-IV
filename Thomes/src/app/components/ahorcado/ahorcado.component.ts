@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { UserService } from '../../services/data/user.service';
+import { PuntajesService } from '../../services/data/puntajes.service';
 
 @Component({
   selector: 'app-ahorcado',
@@ -6,6 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './ahorcado.component.scss'
 })
 export class AhorcadoComponent {
+  userService = inject(UserService);
+  puntajeService = inject(PuntajesService);
+
   juegoIniciado: boolean;
   listaLetrasDisponibles: string[];
   listaLetrasIngresadas: string[];
@@ -83,6 +88,8 @@ export class AhorcadoComponent {
   {
     this.juegoIniciado = false;
     this.mensaje = mensaje;
+    this.puntaje = this.puntaje - this.errores;
+    if(this.puntaje > 3) { this.puntajeService.GuardarPuntaje(this.puntaje, "Ahorcado"); }
     this.arrayPalabraSecreta.length = 0;
     this.listaLetrasErroneas.length = 0;
     this.listaLetrasCorrectas.length = 0;
