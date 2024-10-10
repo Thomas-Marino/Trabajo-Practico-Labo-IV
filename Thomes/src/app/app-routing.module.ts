@@ -7,6 +7,7 @@ import { RegistroComponent } from './components/registro/registro.component';
 import { TablaPuntajesComponent } from './components/tabla-puntajes/tabla-puntajes.component';
 import { soloUsuarioGuard } from './guards/solo-usuario.guard';
 import { NotFoundComponent } from './components/errores/not-found/not-found.component';
+import { EncuestaComponent } from './components/encuesta/encuesta.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'registro', component: RegistroComponent},
   {path: 'quien-soy', component: QuienSoyComponent},
   {path: 'ranking', component: TablaPuntajesComponent},
+  {path: 'encuesta', canActivate: [soloUsuarioGuard], component: EncuestaComponent},
   {path: 'juegos', canActivate: [soloUsuarioGuard], loadChildren: () => import('./modules/juegos/juegos-routing.module').then(m => m.JuegosRoutingModule)},
   {path: 'errores', loadChildren: () => import('./modules/errores/errores-routing.module').then(m => m.ErroresRoutingModule) },
   { path: '**', redirectTo: '/errores' }
