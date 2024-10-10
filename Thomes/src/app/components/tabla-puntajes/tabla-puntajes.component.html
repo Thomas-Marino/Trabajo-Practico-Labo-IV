@@ -1,0 +1,49 @@
+<div class="row contenedor-mensajes">
+    <div class="col">
+        <h3 class="mensajes fuente-titulo">Bienvenido a la tabla de rankings de Thomes!</h3>
+        <br>
+        <p class="mensajes">
+            Para poder ver la tabla de puntajes, primero debes seleccionar el juego del cual deseas ver los rankings. 
+            A continuación se mostrarán los mejores 10 jugadores de dicho juego!
+        </p>
+    </div>
+</div>
+
+<div class="contenedor-tabla row">
+    <table *ngIf="this.mostrarTabla">
+        <tr class="row-headers">
+            <th class="fuente-titulo">Posición</th>
+            <th class="fuente-titulo">Usuario</th>
+            <th class="fuente-titulo">Puntaje</th>
+            <th class="fuente-titulo">Fecha</th>
+        </tr>
+
+        <tr class="row-puntajes" *ngFor="let puntajeObtenido of observablePuntajes | async; let i = index">
+            <td class="fuente-titulo" *ngIf="i + 1 <= 10">{{i + 1}}</td>
+            <td class="fuente-titulo" *ngIf="i + 1 <= 10">{{puntajeObtenido.nombreUsuario}}</td>
+            <td class="fuente-titulo" *ngIf="i + 1 <= 10">{{puntajeObtenido.puntajeUsuario}}</td>
+            <td class="fuente-titulo" *ngIf="i + 1 <= 10">{{puntajeObtenido.fecha}}</td>
+        </tr>
+    </table>
+</div>
+
+<!-- <div class="row">
+    <div class="col">
+        <mat-card class="card-mensajes" appearance="outlined">
+            <mat-card-header>
+                <mat-card-title-group>
+                    <mat-card-title>{{this.mensaje}}</mat-card-title>
+                </mat-card-title-group>
+            </mat-card-header>
+        </mat-card>
+    </div>
+</div> -->
+
+<div class="row">
+    <div id="contenedor-interacciones">
+        <button class="fuente-titulo" (click)="this.CambiarTablaDePuntajes('Ahorcado')">Ahorcado</button>
+        <button class="fuente-titulo" (click)="this.CambiarTablaDePuntajes('Mayor Menor')">Mayor Menor</button>
+        <button class="fuente-titulo" (click)="this.CambiarTablaDePuntajes('Preguntados')">Preguntados</button>
+        <button class="fuente-titulo" (click)="this.CambiarTablaDePuntajes('GameGuessr')">GameGuessr</button>
+    </div>
+</div>
