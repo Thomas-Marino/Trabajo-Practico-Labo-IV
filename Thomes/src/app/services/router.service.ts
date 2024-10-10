@@ -8,23 +8,38 @@ export class RouterService {
 
   constructor(public router:Router) { }
 
-  GetUrl() : string
+  GetUrl(): string
   {
     return this.router.url;
   }
 
-  GoToHome() : void
+  GoToHome(): void
   {
     this.router.navigateByUrl("home");
   }
 
-  GoToQuienSoy() : void
+  GoToQuienSoy(): void
   {
     this.router.navigateByUrl("quien-soy");
   }
 
-  GoToLogin() : void
+  GoToLogin(): void
   {
     this.router.navigateByUrl("ingreso");
+  }
+
+  GoToRanking(): void
+  {
+    this.router.navigateByUrl("ranking");
+  }
+
+  GoTo401Unauthorized(): void
+  {
+    this.router.navigateByUrl("/errores/401");
+  }
+
+  GoTo404NotFound(): void
+  {
+    this.router.navigateByUrl("/errores/404")
   }
 }

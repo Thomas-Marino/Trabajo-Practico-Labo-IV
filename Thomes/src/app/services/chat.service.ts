@@ -13,10 +13,10 @@ export interface IMensaje {
 @Injectable({
   providedIn: 'root'
 })
-export class ChatService {
+export class ChatService 
+{
   fireStoreService = inject(FirebaseStoreService);
   fireAuthService = inject(AuthService);
-
   
   constructor() 
   { 
@@ -28,7 +28,7 @@ export class ChatService {
 
   ObtenerMensajes(): Observable<IMensaje[]>
   {
-    return this.fireStoreService.store.collection<IMensaje>('mensajes', ref => ref.orderBy('fechaMensaje')).valueChanges();
+    return this.fireStoreService.firestore.collection<IMensaje>('mensajes', ref => ref.orderBy('fechaMensaje')).valueChanges();
   }
 
   async GuardarMensaje(mensaje: string): Promise<void> 
