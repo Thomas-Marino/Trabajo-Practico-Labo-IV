@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { UserService } from '../../services/data/user.service';
+import { PuntajesService } from '../../services/data/puntajes.service';
 
 export interface IJuego 
 {
@@ -12,6 +14,8 @@ export interface IJuego
   styleUrl: './game-guessr.component.scss'
 })
 export class GameGuessrComponent {
+  puntajeService = inject(PuntajesService);
+
   juegoIniciado: boolean;
   juegos: IJuego[];
   juegoSeleccionado: IJuego;
@@ -86,13 +90,15 @@ export class GameGuessrComponent {
     this.ObtenerJuego();
     this.mensaje = "";
     this.errores = 0;
-    this.puntaje = 10;
+    this.puntaje = 12;
   }
 
   FinalizarJuego(mensaje: string): void
   {
     this.juegoIniciado = false;
     this.mensaje = mensaje;
+    this.puntaje = this.puntaje - this.errores;
+    if(this.puntaje > 0) { this.puntajeService.GuardarPuntaje(this.puntaje, "GameGuessr"); }
     this.juegoSeleccionado = {juego: "", pathImagenes: []};
   }
 
@@ -116,7 +122,7 @@ export class GameGuessrComponent {
     {
       this.mensaje = this.mensajesError[Math.floor(Math.floor(Math.random() * this.mensajesError.length))]
       this.errores = this.errores + 4;
-      if(this.errores == 3) { this.FinalizarJuego(`Buena suerte la próxima...`) }
+      if(this.errores == 12) { this.FinalizarJuego(`Buena suerte la próxima...`) }
     }
 
     this.prediccionIngresada = "";
