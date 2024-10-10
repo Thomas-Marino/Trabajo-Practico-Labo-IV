@@ -4,6 +4,9 @@ import { IngresoComponent } from './components/ingreso/ingreso.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { QuienSoyComponent } from './components/quien-soy/quien-soy.component';
 import { RegistroComponent } from './components/registro/registro.component';
+import { TablaPuntajesComponent } from './components/tabla-puntajes/tabla-puntajes.component';
+import { soloUsuarioGuard } from './guards/solo-usuario.guard';
+import { NotFoundComponent } from './components/errores/not-found/not-found.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -11,7 +14,10 @@ const routes: Routes = [
   {path: 'home', component: InicioComponent},
   {path: 'registro', component: RegistroComponent},
   {path: 'quien-soy', component: QuienSoyComponent},
-  {path: 'juegos', loadChildren: () => import('./modules/juegos/juegos-routing.module').then(m => m.JuegosRoutingModule)}
+  {path: 'ranking', component: TablaPuntajesComponent},
+  {path: 'juegos', canActivate: [soloUsuarioGuard], loadChildren: () => import('./modules/juegos/juegos-routing.module').then(m => m.JuegosRoutingModule)},
+  {path: 'errores', loadChildren: () => import('./modules/errores/errores-routing.module').then(m => m.ErroresRoutingModule) },
+  { path: '**', redirectTo: '/errores' }
 ];
 
 @NgModule({
