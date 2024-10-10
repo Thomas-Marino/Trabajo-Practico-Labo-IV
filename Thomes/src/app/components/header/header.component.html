@@ -1,11 +1,11 @@
 
-<mat-toolbar id="header-app">
+<mat-toolbar id="header-app" *ngIf="this.router.GetUrl() != '/errores/401' && this.router.GetUrl() != '/errores/404'">
     <p id="texto-img">
         <img src="imgs/iconos/game.png"> 
         Thomes
     </p>
-    
     <button class="fuente-titulo btn-header" (click)="this.router.GoToHome()">Inicio</button>        
+    <button class="fuente-titulo btn-header" (click)="this.router.GoToRanking()">Ranking</button>        
     <button class="fuente-titulo btn-header" *ngIf="this.nombreUsuario == ''" (click)="this.router.GoToLogin()">Ingreso</button>        
     <button class="fuente-titulo btn-header" (click)="this.router.GoToQuienSoy()">Quién soy</button>        
     
