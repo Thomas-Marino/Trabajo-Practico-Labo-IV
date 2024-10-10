@@ -1,13 +1,17 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { AuthService } from '../firebase/firebase-auth.service'
 import { BehaviorSubject } from 'rxjs';
+import { FirebaseStoreService } from '../firebase/firebase-store.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService 
 {
-  constructor(public authService:AuthService) { }
+  authService = inject(AuthService);
+  fireStoreService = inject(FirebaseStoreService);
+
+  constructor() { }
 
   // BehaviorSubject para emitir el nombre del usuario
   private nombreUsuarioSubject = new BehaviorSubject<string>('');
@@ -21,6 +25,10 @@ export class UserService
   // Función para obtener el valor actual del usuario (sin necesidad de suscribirse)
   ObtenerNombreUsuario(): string 
   { 
-    return this.nombreUsuarioSubject.getValue(); 
+    const usuarioLocalStorage = localStorage.getItem("usuarioLogueado");
+    
+    if(this.nombreUsuarioSubject.getValue() != "") { return this.nombreUsuarioSubject.getValue(); }
+    if(usuarioLocalStorage) { return usuarioLocalStorage; } 
+    return "";
   }
 }
