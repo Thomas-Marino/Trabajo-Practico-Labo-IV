@@ -19,6 +19,7 @@ export class MayorMenorComponent
   mensaje: string;
   puntaje: number;
   mostrarAnimacion: boolean;
+  cartasRestantes: number;
 
   constructor() 
   {
@@ -30,6 +31,7 @@ export class MayorMenorComponent
     this.mensaje = "Bienvenido a mayor o menor! Las reglas son sencillas: Al comenzar el juego, se asignará un valor de carta al azar y deberá adivinar si la proxima carta del mazo es mayor o menor a la carta sobre la mesa. Que comience el juego!";
     this.puntaje = 0;
     this.mostrarAnimacion = false;
+    this.cartasRestantes = 0;
   }
 
   async IniciarJuego(): Promise<void>
@@ -60,7 +62,7 @@ export class MayorMenorComponent
 
     if(res.remaining > 0)
     {
-
+      this.cartasRestantes = res.remaining;
       switch (res.cards[0].value)
       {
         case "JACK":
